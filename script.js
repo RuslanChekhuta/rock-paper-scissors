@@ -1,3 +1,5 @@
+const btns = document.querySelectorAll("button");
+
 let getComputerChoice = () => {
   let rNum = Math.floor(Math.random() * 3);
 
@@ -50,11 +52,11 @@ let playGame = () => {
     }
   };
 
-  playRound(getHumanChoice(), getComputerChoice());
-  playRound(getHumanChoice(), getComputerChoice());
-  playRound(getHumanChoice(), getComputerChoice());
-  playRound(getHumanChoice(), getComputerChoice());
-  playRound(getHumanChoice(), getComputerChoice());
+  btns.forEach((btn) => {
+    btn.addEventListener("click", (e) =>
+      playRound(e.target.textContent, getComputerChoice()),
+    );
+  });
 
   return `Final score: Human ${humanScore} - Computer ${computerScore}\n${humanScore > computerScore ? "You won the game" : humanScore < computerScore ? "Computer won the game" : "Tie game"}!`;
 };
