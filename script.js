@@ -54,8 +54,13 @@ let playGame = () => {
         e.currentTarget.dataset.choice,
         getComputerChoice(),
       );
+
       playerScore.textContent = humanScore;
       compScore.textContent = computerScore;
+      if (humanScore >= 5 || computerScore >= 5) {
+        logTotal.textContent = `Final score: Human ${humanScore} - Computer ${computerScore}\n${humanScore > computerScore ? "You won the game" : humanScore < computerScore ? "Computer won the game" : "Tie game"}!`;
+        btns.forEach((b) => (b.disabled = true));
+      }
     });
   });
 };
