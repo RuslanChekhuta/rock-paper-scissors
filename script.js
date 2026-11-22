@@ -1,11 +1,11 @@
 const btns = document.querySelectorAll(".psk-btn");
 const logTotal = document.querySelector(".roundText");
 
-let playerScore = document.getElementById("player-score");
+const playerScore = document.getElementById("player-score");
 
-let compScore = document.getElementById("computer-score");
+const compScore = document.getElementById("computer-score");
 
-let getComputerChoice = () => {
+const getComputerChoice = () => {
   let rNum = Math.floor(Math.random() * 3);
 
   if (rNum === 0) {
@@ -17,12 +17,12 @@ let getComputerChoice = () => {
   }
 };
 
-let playGame = () => {
+const playGame = () => {
   let humanScore = 0;
 
   let computerScore = 0;
 
-  let playRound = (humanChoice, computerChoice) => {
+  const playRound = (humanChoice, computerChoice) => {
     computerChoice = computerChoice.toLowerCase();
 
     if (humanChoice === computerChoice) {
@@ -58,7 +58,7 @@ let playGame = () => {
       playerScore.textContent = humanScore;
       compScore.textContent = computerScore;
       if (humanScore >= 5 || computerScore >= 5) {
-        logTotal.textContent = `Final score: Human ${humanScore} - Computer ${computerScore}\n${humanScore > computerScore ? "You won the game" : humanScore < computerScore ? "Computer won the game" : "Tie game"}!`;
+        logTotal.textContent = `Final score: Human ${humanScore} - Computer ${computerScore} ${humanScore > computerScore ? "You won the game" : humanScore < computerScore ? "Computer won the game" : "Tie game"}!`;
         btns.forEach((b) => (b.disabled = true));
       }
     });
