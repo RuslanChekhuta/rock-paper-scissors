@@ -5,13 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <button data-choice="rock">Rock</button>
-    <button data-choice="paper">Paper</button>
-    <button data-choice="scissors">Scissors</button>
-    <div></div>
+    <div class="container">
+
+        <h1>Rock, Paper, Scissors</h1>
+        <h2>Make your move to start the round</h2>
+        <button data-choice="rock" class="psk-btn">Rock</button>
+        <button data-choice="paper" class="psk-btn">Paper</button>
+        <button data-choice="scissors" class="psk-btn">Scissors</button>
+        <div class="roundText"></div>
+        <div class="score_wrap">
+            <div class="score-item">
+                <span class="score-label">You</span>
+                <span class="score-value" id="player-score">0</span>
+            </div>
+            <div class="score-item">
+                <span class="score-label">Computer</span>
+                <span class="score-value" id="computer-score">0</span>
+            </div>
+        </div>
+
+    </div>
     <script src="./script.js"></script>
 </body>
 

@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  margin: 20% auto;
+}
+
+h1 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6b7280;
+  margin-bottom: 1.75rem;
+}
+
+.psk-btn {
+  display: inline-block;
+  margin: 0.35rem;
+  padding: 0.75rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    background-color 0.2s ease;
+}
